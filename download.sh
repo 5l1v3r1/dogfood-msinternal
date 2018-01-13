@@ -12,7 +12,6 @@ wget $URL/wsus/setup.exe
 mkdir Data && cd Data
 wget $URL/$ID/Data/v64.cab
 wget $URL/$ID/Data/v64_$VERSION.cab
-wget $URL/wsus/setup.exe
 
 # Creates the 'Office/Data/$VERSION' directory, enters the 'Office/Data/$VERSION' directory & downloads all of the required files
 mkdir $VERSION && cd $VERSION
