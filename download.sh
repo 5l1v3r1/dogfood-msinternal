@@ -26,5 +26,3 @@ wget $URL/$ID/Office/Data/$VERSION/s641033.cab
 wget $URL/$ID/Office/Data/$VERSION/s321033.cab
 wget $URL/$ID/Office/Data/$VERSION/stream.x64.x-none.dat.cobra
 wget $URL/$ID/Office/Data/$VERSION/stream.x64.en-US.dat.cobra
-
-cd ../../../
