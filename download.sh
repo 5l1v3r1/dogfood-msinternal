@@ -4,12 +4,11 @@ ID=EA4A4090-DE26-49D7-93C1-91BFF9E53FC3 # Channel : Dogfood_O16ProPlus-O15Visio_
 VERSION=16.0.9009.1000 # You can grab the latest version number for branch 'Dogfood_O16ProPlus-O15Visio_DevMain' @ tools.thecollectionbook.info/latest/?guid=EA4A4090-DE26-49D7-93C1-91BFF9E53FC3
 # End of Microsoft Office Configuration
 
-# Creates the 'Office' directory, enters 'Office' directory & downloads all of the required files
-mkdir Office && cd Office
+# Downloads the file at the root directory
 wget $URL/wsus/setup.exe
 
 # Creates the 'Office/Data' directory, enters the 'Office/Data' directory & downloads all of the required files
-mkdir Data && cd Data
+mkdir Office/Data && cd Office/Data
 wget $URL/$ID/Office/Data/v64.cab
 wget $URL/$ID/Office/Data/v64_$VERSION.cab
 
@@ -27,3 +26,5 @@ wget $URL/$ID/Office/Data/$VERSION/s641033.cab
 wget $URL/$ID/Office/Data/$VERSION/s321033.cab
 wget $URL/$ID/Office/Data/$VERSION/stream.x64.x-none.dat.cobra
 wget $URL/$ID/Office/Data/$VERSION/stream.x64.en-US.dat.cobra
+
+cd ../../
