@@ -6,6 +6,7 @@
       <ExcludeApp ID="Outlook" />
       <ExcludeApp ID="OneNote" />
       <ExcludeApp ID="Publisher" />
+      <ExcludeApp ID="Lync" />
       <ExcludeApp ID="Access" />
     </Product>
   </Add>
