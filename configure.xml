@@ -7,6 +7,8 @@
       <ExcludeApp ID="OneNote" />
       <ExcludeApp ID="Publisher" />
       <ExcludeApp ID="Lync" />
+      <ExcludeApp ID="OneDrive" />
+      <ExcludeApp ID="Groove" />
       <ExcludeApp ID="Access" />
     </Product>
   </Add>
