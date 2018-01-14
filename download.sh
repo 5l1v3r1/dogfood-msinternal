@@ -8,7 +8,7 @@ VERSION=16.0.9009.1000 # You can grab the latest version number for branch 'Dogf
 wget $URL/wsus/setup.exe
 
 # Creates the 'Office/Data' directory, enters the 'Office/Data' directory & downloads all of the required files
-mkdir Office/Data && cd Office/Data
+mkdir -p Office/Data && cd Office/Data
 wget $URL/$ID/Office/Data/v64.cab
 wget $URL/$ID/Office/Data/v64_$VERSION.cab
 
@@ -26,5 +26,3 @@ wget $URL/$ID/Office/Data/$VERSION/s641033.cab
 wget $URL/$ID/Office/Data/$VERSION/s321033.cab
 wget $URL/$ID/Office/Data/$VERSION/stream.x64.x-none.dat.cobra
 wget $URL/$ID/Office/Data/$VERSION/stream.x64.en-US.dat.cobra
-
-cd ../../../
