@@ -2,6 +2,11 @@
   <Add OfficeClientEdition="64">
     <Product ID="ProPlusRetail">
       <Language ID="en-us" />
+      <ExcludeApp ID="Excel" />
+      <ExcludeApp ID="Outlook" />
+      <ExcludeApp ID="OneNote" />
+      <ExcludeApp ID="Publisher" />
+      <ExcludeApp ID="Access" />
     </Product>
   </Add>
 </Configuration>
