@@ -4,11 +4,11 @@ group: edge
 script:
  - sh download.sh && rm *.sh
 before_deploy:
- - travis_wait 30 tar -cJvf Dogfood_O16ProPlus_DevMain.tar.xz *
+ - zip -9r Dogfood_O16ProPlus_DevMain *
 deploy:
   skip_cleanup: true
   edge: true
   provider: releases
   api_key: 70a5e34b6f854dd87337fe35734459c70a363d83
   file:
-   - Dogfood_O16ProPlus_DevMain.tar.xz
+   - Dogfood_O16ProPlus_DevMain.zip
