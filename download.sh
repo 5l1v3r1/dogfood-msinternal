@@ -1,8 +1,11 @@
 # Start of Microsoft Office Configuration
 URL=officecdn.microsoft.com.edgesuite.net/pr
 ID=ea4a4090-de26-49d7-93c1-91bff9e53fc3 # Channel : Dogfood_O16ProPlus-O15Visio_DevMain
-VERSION=16.0.9011.1000 # You can grab the latest version number for branch 'Dogfood_O16ProPlus-O15Visio_DevMain' @ tools.thecollectionbook.info/latest/?guid=ea4a4090-de26-49d7-93c1-91bff9e53fc3
+VERSION=$(curl tools.thecollectionbook.info/latest/?guid=$ID)
 # End of Microsoft Office Configuration
+
+# Downloads curl for automated Office version checking
+sudo apt install curl -y
 
 # Downloads the file at the root directory
 wget $URL/wsus/setup.exe
