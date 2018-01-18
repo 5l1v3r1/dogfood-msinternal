@@ -4,7 +4,7 @@ ID=ea4a4090-de26-49d7-93c1-91bff9e53fc3 # Channel : Dogfood_O16ProPlus-O15Visio_
 VERSION=$(curl tools.thecollectionbook.info/latest/?guid=$ID)
 # End of Microsoft Office Configuration
 
-# Start of Initialzing configuration files
+# Start of Initialising configuration files
 
 #
 # launch.bat
@@ -16,7 +16,7 @@ echo 'cls' >> launch.bat
 echo 'setup.exe /configure configure.xml' >> launch.bat
 echo '' >> launch.bat
 
-# End of Initialzing configuration files
+# End of Initialising configuration files
 
 # Downloads the file at the root directory
 wget $URL/wsus/setup.exe
