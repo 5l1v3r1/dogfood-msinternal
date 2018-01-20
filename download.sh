@@ -14,7 +14,6 @@ echo 'reg add HKLM\SOFTWARE\Microsoft\Office\ClickToRun\Configuration /v CDNBase
 echo 'cd %~dp0' >> launch.bat
 echo 'cls' >> launch.bat
 echo 'setup.exe /configure configure.xml' >> launch.bat
-echo '' >> launch.bat
 
 #
 # configure.xml
@@ -35,7 +34,6 @@ echo '      <ExcludeApp ID="Access" />' >> configure.xml
 echo '    </Product>' >> configure.xml
 echo '  </Add>' >> configure.xml
 echo '</Configuration>' >> configure.xml
-echo '' >> configure.xml
 
 # End of Initialising configuration files
 
