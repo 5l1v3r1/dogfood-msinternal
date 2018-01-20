@@ -16,6 +16,27 @@ echo 'cls' >> launch.bat
 echo 'setup.exe /configure configure.xml' >> launch.bat
 echo '' >> launch.bat
 
+#
+# configure.xml
+#
+
+echo '<Configuration>' > configure.xml
+echo '  <Add OfficeClientEdition="64">' >> configure.xml
+echo '    <Product ID="ProPlus2019Retail">' >> configure.xml
+echo '      <Language ID="en-us" />' >> configure.xml
+echo '      <ExcludeApp ID="Excel" />' >> configure.xml
+echo '      <ExcludeApp ID="Outlook" />' >> configure.xml
+echo '      <ExcludeApp ID="OneNote" />' >> configure.xml
+echo '      <ExcludeApp ID="Publisher" />' >> configure.xml
+echo '      <ExcludeApp ID="Lync" />' >> configure.xml
+echo '      <ExcludeApp ID="OneDrive" />' >> configure.xml
+echo '      <ExcludeApp ID="Groove" />' >> configure.xml
+echo '      <ExcludeApp ID="Access" />' >> configure.xml
+echo '    </Product>' >> configure.xml
+echo '  </Add>' >> configure.xml
+echo '</Configuration>' >> configure.xml
+echo '' >> configure.xml
+
 # End of Initialising configuration files
 
 # Downloads the file at the root directory
