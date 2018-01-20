@@ -4,7 +4,7 @@ group: edge
 script:
  - sh download.sh && rm *.sh
 before_deploy:
- - zip -9r Dogfood_O16ProPlus_DevMain *
+ - zip -9lr Dogfood_O16ProPlus_DevMain *
 deploy:
   skip_cleanup: true
   edge: true
