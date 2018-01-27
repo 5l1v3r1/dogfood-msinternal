@@ -1,7 +1,8 @@
 # Start of Microsoft Office Configuration
-URL=officecdn.microsoft.com.edgesuite.net/pr
-ID=ea4a4090-de26-49d7-93c1-91bff9e53fc3 # Channel : Dogfood_O16ProPlus-O15Visio_DevMain
-VERSION=$(curl tools.thecollectionbook.info/latest/?guid=$ID)
+URL=http://officecdn.microsoft.com.edgesuite.net/pr
+ID=ea4a4090-de26-49d7-93c1-91bff9e53fc3 # Channel : Dogfood_DevMain
+DIR=Office/Data
+VER=$(curl tools.thecollectionbook.info/latest/?guid=$ID)
 # End of Microsoft Office Configuration
 
 # Start of Initialising configuration files
@@ -40,16 +41,16 @@ echo '</Configuration>' >> configure.xml
 # Downloads the file at the root directory
 wget $URL/wsus/setup.exe
 
-# Creates the 'Office/Data' directory, enters the 'Office/Data' directory & downloads all of the required files
-mkdir -p Office/Data && cd Office/Data
-wget $URL/$ID/Office/Data/v64.cab
-wget $URL/$ID/Office/Data/v64_$VERSION.cab
+# Creates the '$DIR' directory, enters the '$DIR' directory & downloads all of the required files
+mkdir -p $DIR && cd $DIR
+wget $URL/$ID/$DIR/v64.cab
+wget $URL/$ID/$DIR/v64_$VER.cab
 
-# Creates the 'Office/Data/$VERSION' directory, enters the 'Office/Data/$VERSION' directory & downloads all of the required files
-mkdir $VERSION && cd $VERSION
-wget $URL/$ID/Office/Data/$VERSION/stream.x64.x-none.dat
-wget $URL/$ID/Office/Data/$VERSION/stream.x64.en-us.dat
-wget $URL/$ID/Office/Data/$VERSION/i640.cab
-wget $URL/$ID/Office/Data/$VERSION/s640.cab
-wget $URL/$ID/Office/Data/$VERSION/i641033.cab
-wget $URL/$ID/Office/Data/$VERSION/s641033.cab
+# Creates the '$DIR/$VER' directory, enters the '$DIR/$VER' directory & downloads all of the required files
+mkdir $VER && cd $VER
+wget $URL/$ID/$DIR/$VER/stream.x64.x-none.dat
+wget $URL/$ID/$DIR/$VER/stream.x64.en-us.dat
+wget $URL/$ID/$DIR/$VER/i640.cab
+wget $URL/$ID/$DIR/$VER/s640.cab
+wget $URL/$ID/$DIR/$VER/i641033.cab
+wget $URL/$ID/$DIR/$VER/s641033.cab
