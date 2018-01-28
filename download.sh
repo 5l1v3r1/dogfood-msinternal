@@ -1,5 +1,5 @@
 # Start of Microsoft Office Configuration
-URL=http://officecdn.microsoft.com.edgesuite.net/pr
+URL=officecdn.microsoft.com.edgesuite.net/pr
 ID=ea4a4090-de26-49d7-93c1-91bff9e53fc3 # Channel : Dogfood_DevMain
 DIR=Office/Data
 VER=$(curl tools.thecollectionbook.info/latest/?guid=$ID)
