@@ -54,6 +54,3 @@ wget $URL/$ID/$DIR/$VER/i640.cab
 wget $URL/$ID/$DIR/$VER/s640.cab
 wget $URL/$ID/$DIR/$VER/i641033.cab
 wget $URL/$ID/$DIR/$VER/s641033.cab
-
-# Packages all the downloaded contents into '$ID - $VER.zip'
-zip -9lr $ID\ -\ $VER.zip *
