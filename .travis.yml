@@ -3,6 +3,9 @@ language: generic
 group: edge
 script:
  - sh download.sh && rm *.sh
+before_deploy:
+ - git tag $(date '+%d.%m.%y') -f -m ''
+ - git push -f --tags
 deploy:
   skip_cleanup: true
   edge: true
