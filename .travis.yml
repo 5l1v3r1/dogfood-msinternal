@@ -8,5 +8,6 @@ deploy:
   edge: true
   provider: releases
   api_key: 70a5e34b6f854dd87337fe35734459c70a363d83
+  file_glob: true
   file:
-   - Dogfood_O16ProPlus_DevMain.zip
+   - *.zip
