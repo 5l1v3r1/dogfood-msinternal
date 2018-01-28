@@ -12,7 +12,7 @@ VER=$(curl tools.thecollectionbook.info/latest/?guid=$ID)
 #
 
 echo 'reg add HKLM\SOFTWARE\Microsoft\Office\ClickToRun\Configuration /v CDNBaseUrl /d http://officecdn.microsoft.com/pr/'$ID > launch.bat
-echo 'cd %~dp0' >> launch.bat
+echo 'cd /d %~dp0' >> launch.bat
 echo 'cls' >> launch.bat
 echo 'setup.exe /configure configure.xml' >> launch.bat
 
