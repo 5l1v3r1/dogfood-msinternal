@@ -5,10 +5,14 @@ script:
  - sh download.sh && rm *.sh
 before_deploy:
  - zip -9lr Dogfood_DevMain *
+ - split -b 1536M Dogfood_DevMain.zip
+ - rm Dogfood_DevMain.zip
 deploy:
   skip_cleanup: true
   edge: true
   provider: releases
   api_key: 70a5e34b6f854dd87337fe35734459c70a363d83
   file:
-   - Dogfood_DevMain.zip
+   - xaa
+   - xab
+   - xac
