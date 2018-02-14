@@ -11,7 +11,7 @@ deploy:
   skip_cleanup: true
   edge: true
   provider: releases
-  api_key: 70a5e34b6f854dd87337fe35734459c70a363d83
+  api_key: $GITHUB_OAUTH_TOKEN
   file:
    - xaa
    - xab
