@@ -21,6 +21,3 @@ cabextract -q *.cab && rm *.cab && cd ..
 
 echo '@echo off' > launch.bat
 echo 'OfficeClickToRun.exe deliverymechanism=ea4a4090-de26-49d7-93c1-91bff9e53fc3 platform=x64 culture=en-us productstoadd=ProPlusVolume_en-us_x-none baseurl=http://officecdn.microsoft.com/pr/ea4a4090-de26-49d7-93c1-91bff9e53fc3 ProPlusVolume.excludedapps=access,excel,groove,lync,onedrive,onenote,outlook,publisher updatesenabled=True cdnbaseurl=http://officecdn.microsoft.com/pr/ea4a4090-de26-49d7-93c1-91bff9e53fc3 version=16.0.9127.2004 mediatype=CDN' >> launch.bat
-
-# Packages all the downloaded contents into '$VER.zip'
-zip -9lr $VER.zip *
