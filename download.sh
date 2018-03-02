@@ -1,26 +1,21 @@
-# Start of Microsoft Office Configuration
-URL=officecdn.microsoft.com.edgesuite.net/pr
-ID=ea4a4090-de26-49d7-93c1-91bff9e53fc3
-DIR=Office/Data
-# End of Microsoft Office Configuration
+A0=http://officecdn.microsoft.com/pr
+A1=ea4a4090-de26-49d7-93c1-91bff9e53fc3
+A2=Office/Data
+A3=16.0.9127.2004
 
-wget -q $URL/$ID/$DIR/MRO.cab && cabextract -qF MRO.xml MRO.cab && rm MRO.cab
-VER=$(grep 'Available' MRO.xml | awk -F">" '{print $2}' | awk -F"<" '{print $1}' && rm MRO.xml)
-
-# Creates the 'ClickToRun' directory, enters the 'ClickToRun' directory & downloads all of the required files
 mkdir ClickToRun && cd ClickToRun
-wget -q $URL/$ID/$DIR/$VER/i640.cab
-wget -q $URL/$ID/$DIR/$VER/i641033.cab
-
-# Extracts all the files from 'i640' & 'i6401033' cabinet (.cab) files
+wget -q $A0/$A1/$A2/$A3/i640.cab
+wget -q $A0/$A1/$A2/$A3/i641033.cab
 cabextract -q *.cab && rm *.cab && cd ..
 
-#
-# launch.bat
-#
+B1=ProPlusVolume
+B2=en-us
+B3=x64
+B4=access,excel,groove,lync,onedrive,onenote,outlook,publisher
 
 echo '@echo off' > launch.bat
-echo 'cd /d %~dp0' >> launch.bat
-echo 'move ClickToRun "C:\Program Files\Common Files\microsoft shared" >nul' >> launch.bat
-echo 'cd "C:\Program Files\Common Files\microsoft shared\ClickToRun"' >> launch.bat
-echo 'OfficeClickToRun.exe deliverymechanism=ea4a4090-de26-49d7-93c1-91bff9e53fc3 platform=x64 culture=en-us productstoadd=ProPlusVolume_en-us_x-none baseurl=http://officecdn.microsoft.com/pr/ea4a4090-de26-49d7-93c1-91bff9e53fc3 ProPlusVolume.excludedapps=access,excel,groove,lync,onedrive,onenote,outlook,publisher updatesenabled=True cdnbaseurl=http://officecdn.microsoft.com/pr/ea4a4090-de26-49d7-93c1-91bff9e53fc3 version='$VER' mediatype=CDN' >> launch.bat
+echo 'cd /d %~dp0' > launch.bat
+echo 'move ClickToRun "%ProgramFiles%\Common Files\microsoft shared" >nul' >> launch.bat
+echo '"%ProgramFiles%\Common Files\microsoft shared\ClickToRun\OfficeClickToRun.exe" deliverymechanism='$A1' platform='$B3' culture='$B2' productstoadd='$B1'_'$B2'_x-none baseurl='$A0'/'$A1' '$B1'.excludedapps='$B4' updatesenabled=True cdnbaseurl='$A0'/'$A1' version='$A3' mediatype=CDN' >> launch.bat
+echo 'cscript //b "%ProgramFiles%\Microsoft Office\Office16\OSPP.VBS" /inpkey:' >> launch.bat
+echo 'cscript //b "%ProgramFiles%\Microsoft Office\Office16\OSPP.VBS" /actcid:' >> launch.bat
