@@ -1,7 +1,9 @@
 A0=http://officecdn.microsoft.com/pr
 A1=ea4a4090-de26-49d7-93c1-91bff9e53fc3
 A2=Office/Data
-A3=16.0.9127.2004
+
+wget -q $A0/$A1/$A2/MRO.cab && cabextract -qF MRO.xml MRO.cab && rm MRO.cab
+A3=$(grep 'Available' MRO.xml | awk -F">" '{print $2}' | awk -F"<" '{print $1}' && rm MRO.xml)
 
 mkdir ClickToRun && cd ClickToRun
 wget -q $A0/$A1/$A2/$A3/i640.cab
