@@ -10,14 +10,12 @@ wget -q $A0/$A1/$A2/$A3/i640.cab
 wget -q $A0/$A1/$A2/$A3/i641033.cab
 cabextract -q *.cab && rm *.cab && cd ..
 
-B1=ProPlus2019Retail
+B1=O365ProPlusRetail
 B2=en-us
 B3=x64
 B4=access,excel,groove,lync,onedrive,onenote,outlook,publisher
 
 echo '@echo off' > launch.bat
-echo 'cd /d %~dp0' >> launch.bat
+echo 'cd %~dp0' >> launch.bat
 echo 'move ClickToRun "%CommonProgramFiles%\microsoft shared" >nul' >> launch.bat
-echo '"%CommonProgramFiles%\microsoft shared\ClickToRun\OfficeClickToRun.exe" deliverymechanism='$A1' platform='$B3' culture='$B2' productstoadd='$B1'_'$B2'_x-none baseurl='$A0'/'$A1' '$B1'.excludedapps='$B4' updatesenabled=True cdnbaseurl='$A0'/'$A1' version='$A3' mediatype=CDN' >> launch.bat
-#echo 'cscript //b "%ProgramFiles%\Microsoft Office\Office16\OSPP.VBS" /inpkey:' >> launch.bat
-#echo 'cscript //b "%ProgramFiles%\Microsoft Office\Office16\OSPP.VBS" /actcid:' >> launch.bat
+echo '"%CommonProgramFiles%\microsoft shared\ClickToRun\OfficeClickToRun.exe" deliverymechanism='$A1' platform='$B3' culture='$B2' productstoadd='$B1'.16_'$B2'_x-none baseurl='$A0'/'$A1' '$B1'.excludedapps='$B4' updatesenabled=True cdnbaseurl='$A0'/'$A1' version='$A3' mediatype=CDN' >> launch.bat
