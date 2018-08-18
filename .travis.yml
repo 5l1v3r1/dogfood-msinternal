@@ -13,7 +13,7 @@ script:
   - sh *.sh
   - rm *.js *.sh
 before_deploy:
-  - zip -9lq SetupO365ProPlusRetail.x64.en-us.zip *
+  - zip -9lqr SetupO365ProPlusRetail.x64.en-us.zip *
 deploy:
   provider: releases
   edge: true
