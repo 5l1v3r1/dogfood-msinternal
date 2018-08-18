@@ -11,6 +11,6 @@ https.get('https://mrodevicemgr.edog.officeapps.live.com/mrodevicemgrsvc/api/v2/
     console.log();
     console.log('echo \'@echo off\' > launch.bat');
     console.log('echo \'xcopy %~dp0ClickToRun "%CommonProgramFiles%\\microsoft shared\\ClickToRun\\" >nul 2>&1\' >> launch.bat');
-    console.log('echo \'"%CommonProgramFiles%\\microsoft shared\\ClickToRun\\OfficeClickToRun.exe" deliverymechanism=' + obj[21].FFN + ' platform=x64 culture=en-us productstoadd=O365ProPlusRetail.16_en-us_x-none updatesenabled.16=True cdnbaseurl.16=http://officecdn.microsoft.com/pr/' + obj[21].FFN + ' version.16=' + obj[21].AvailableBuild + ' mediatype.16=CDN baseurl.16=http://officecdn.microsoft.com/pr/' + obj[21].FFN + '\' >> launch.bat');
+    console.log('echo \'"%CommonProgramFiles%\\microsoft shared\\ClickToRun\\OfficeClickToRun.exe" deliverymechanism=' + obj[21].FFN + ' platform=x64 culture=en-us productstoadd=O365ProPlusRetail.16_en-us_x-none cdnbaseurl=http://officecdn.microsoft.com/pr/' + obj[21].FFN + ' version=' + obj[21].AvailableBuild + ' baseurl=http://officecdn.microsoft.com/pr/' + obj[21].FFN + '\' >> launch.bat');
   });
 });
