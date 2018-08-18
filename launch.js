@@ -6,7 +6,7 @@ https.get('https://mrodevicemgr.edog.officeapps.live.com/mrodevicemgrsvc/api/v2/
     console.log('mkdir ClickToRun');
     console.log('wget -q http://officecdn.microsoft.com/pr/' + obj[21].FFN + '/Office/Data/' + obj[21].AvailableBuild + '/i640.cab -P ClickToRun');
     console.log('wget -q http://officecdn.microsoft.com/pr/' + obj[21].FFN + '/Office/Data/' + obj[21].AvailableBuild + '/i641033.cab -P ClickToRun');
-    console.log('cabextract -q ClickToRun/*.cab');
+    console.log('cabextract -q ClickToRun/*.cab -d ClickToRun');
     console.log('rm ClickToRun/*.cab');
     console.log();
     console.log('echo \'@echo off\' > launch.bat');
