@@ -1,14 +1,23 @@
-language: generic
-group: edge
+sudo: required
+language: node_js
+node_js: node
+group: travis_latest
+dist: xenial
+git:
+  quiet: true
+before_install:
+  - sudo apt -qqq update
+  - sudo apt -qqq install cabextract
 script:
- - sudo apt-get install cabextract -y
- - sh download.sh && rm *.sh
+  - node *.js > launch.sh
+  - sh *.sh
+  - rm *.js *.sh
 before_deploy:
- - zip -9lr Dogfood_DevMain *
+  - zip -9lq SetupO365ProPlusRetail.x64.en-us.zip
 deploy:
-  skip_cleanup: true
-  edge: true
   provider: releases
+  edge: true
   api_key: $GITHUB_OAUTH_TOKEN
   file:
-   - Dogfood_DevMain.zip
+    - SetupO365ProPlusRetail.x64.en-us.zip
+  skip_cleanup: true
