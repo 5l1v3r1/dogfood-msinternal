@@ -1,4 +1,3 @@
-sudo: required
 language: node_js
 node_js: node
 group: travis_latest
@@ -17,7 +16,7 @@ before_deploy:
 deploy:
   provider: releases
   edge: true
-  api_key: $GITHUB_OAUTH_TOKEN
+  api_key: $GITHUB_TOKEN
+  skip_cleanup: true
   file:
     - SetupO365ProPlusRetail.x64.en-us.zip
-  skip_cleanup: true
