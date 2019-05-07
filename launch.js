@@ -17,7 +17,9 @@ cabextract ClickToRun/i640.cab ClickToRun/i641033.cab -d ClickToRun > /dev/null 
 rm ClickToRun/i640.cab ClickToRun/i641033.cab
 
 echo '@echo off' > launch.bat
-echo 'robocopy %~dp0ClickToRun "%CommonProgramFiles%\\microsoft shared\\ClickToRun" > nul 2>&1' >> launch.bat
+echo 'if not exist "%CommonProgramFiles%\\microsoft shared\\ClickToRun" (' >> launch.bat
+echo '    robocopy %~dp0ClickToRun "%CommonProgramFiles%\\microsoft shared\\ClickToRun" > nul 2>&1' >> launch.bat
+echo ')' >> launch.bat
 echo 'start "" "%CommonProgramFiles%\\microsoft shared\\ClickToRun\\OfficeClickToRun.exe" deliverymechanism=${id} platform=x64 culture=en-us productstoadd=O365ProPlusRetail.16_en-us_x-none O365ProPlusRetail.excludedapps.16=groove,onenote updatesenabled.16=True cdnbaseurl.16=http://officecdn.microsoft.com/pr/${id} version.16=${ver} mediatype.16=CDN baseurl.16=http://officecdn.microsoft.com/pr/${id}' >> launch.bat
 `
         );
