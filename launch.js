@@ -21,7 +21,7 @@ rm ClickToRun/i640.cab
 {
     echo '@echo off'
     echo 'if not exist "%CommonProgramFiles%\\microsoft shared\\ClickToRun\\OfficeClickToRun.exe" ('
-    echo '    robocopy %~dp0ClickToRun "%CommonProgramFiles%\\microsoft shared\\ClickToRun" > nul 2>&1'
+    echo '    robocopy "%~dp0ClickToRun" "%CommonProgramFiles%\\microsoft shared\\ClickToRun" > nul 2>&1'
     echo ')'
     echo 'if exist "%CommonProgramFiles%\\microsoft shared\\ClickToRun\\OfficeClickToRun.exe" ('
     echo '    start "" "%CommonProgramFiles%\\microsoft shared\\ClickToRun\\OfficeClickToRun.exe" deliverymechanism=${id} platform=x64 culture=en-us productstoadd=O365ProPlusRetail.16_en-us_x-none O365ProPlusRetail.excludedapps.16=groove,onenote updatesenabled.16=True cdnbaseurl.16=http://officecdn.microsoft.com/pr/${id} version.16=${ver} mediatype.16=CDN baseurl.16=http://officecdn.microsoft.com/pr/${id}'
