@@ -1,5 +1,7 @@
 @echo off
 
+reg query HKU\S-1-5-19 > nul 2>&1 || (powershell Start-Process -Verb RunAs """%~0""" > nul 2>&1 & exit)
+
 :architecture
 set option=
 echo Choose what architecture you want your product to be in:
