@@ -90,34 +90,34 @@ echo.
 
 if %option% == 1 (
     set branch=ea4a4090-de26-49d7-93c1-91bff9e53fc3
-    set build=16.0.12228.20002
+    set build=16.0.12307.20000
 ) else if %option% == 2 (
     set branch=f3260cf1-a92c-4c75-b02e-d64c0a86a968
-    set build=16.0.12228.20016
+    set build=16.0.12228.20120
 ) else if %option% == 3 (
     set branch=834504cc-dc55-4c6d-9e71-e024d0253f6d
-    set build=16.0.11929.20424
+    set build=16.0.11929.20436
 ) else if %option% == 4 (
     set branch=c4a7726f-06ea-48e2-a13a-9d78849eb706
-    set build=16.0.10730.20386
+    set build=16.0.10730.20416
 ) else if %option% == 5 (
     set branch=b61285dd-d9f7-41f2-9757-8f61cba4e9c8
-    set build=16.0.12215.20006
+    set build=16.0.12231.20000
 ) else if %option% == 6 (
     set branch=5462eee5-1e97-495b-9370-853cd873bb07
-    set build=16.0.12130.20272
+    set build=16.0.12228.20120
 ) else if %option% == 7 (
     set branch=9a3b7ff2-58ed-40fd-add5-1e5158059d1c
-    set build=16.0.11929.20396
+    set build=16.0.11929.20436
 ) else if %option% == 8 (
     set branch=f4f024c8-d611-4748-a7e0-02b6e754c0fe
-    set build=16.0.11328.20438
+    set build=16.0.11328.20468
 ) else if %option% == 9 (
     set branch=1d2d2ea6-1680-4c56-ac58-a441c8c24ff9
-    set build=16.0.10352.20003
+    set build=16.0.10352.20042
 ) else if %option% == 10 (
     set branch=5440fd1f-7ecb-4221-8110-145efaa6372f
-    set build=16.0.12215.20006
+    set build=16.0.12231.20000
 ) else if %option% == 11 (
     set branch=64256afe-f5d9-4f86-8936-8840a6a4f5be
     set build=16.0.12130.20272
@@ -129,7 +129,7 @@ if %option% == 1 (
     set build=16.0.10351.20054
 ) else if %option% == 14 (
     set branch=492350f6-3a01-4f97-b9c0-c7c6ddf67d60
-    set build=16.0.12026.20344
+    set build=16.0.12130.20272
 ) else if %option% == 15 (
     set branch=7ffbc6bf-bc32-4f92-8982-f9dd17fd3114
     set build=16.0.11328.20438
