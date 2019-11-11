@@ -95,7 +95,7 @@ if %option% == 1 (
     set build=16.0.12307.20000
 ) else if %option% == 2 (
     set branch=f3260cf1-a92c-4c75-b02e-d64c0a86a968
-    set build=16.0.12228.20120
+    set build=16.0.12228.20160
 ) else if %option% == 3 (
     set branch=834504cc-dc55-4c6d-9e71-e024d0253f6d
     set build=16.0.11929.20436
