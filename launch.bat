@@ -92,7 +92,7 @@ echo.
 
 if %option% == 1 (
     set branch=ea4a4090-de26-49d7-93c1-91bff9e53fc3
-    set build=16.0.12307.20000
+    set build=16.0.12311.20000
 ) else if %option% == 2 (
     set branch=f3260cf1-a92c-4c75-b02e-d64c0a86a968
     set build=16.0.12228.20160
