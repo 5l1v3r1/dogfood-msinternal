@@ -1,6 +1,12 @@
 @echo off
 
-reg query HKU\S-1-5-19 > nul 2>&1 || (powershell Start-Process -Verb RunAs """%~0""" > nul 2>&1 & exit)
+reg query HKU\S-1-5-19 > nul 2>&1 && goto architecture
+set command="""%~f0"""
+SetLocal EnableDelayedExpansion
+set command="!command:'=''!"
+powershell Start-Process -FilePath "%ComSpec%" -ArgumentList '/c """!command!"""' -Verb RunAs > nul 2>&1
+SetLocal DisableDelayedExpansion
+exit
 
 :architecture
 set option=
