@@ -18,8 +18,9 @@ before_deploy:
   - git push https://$GITHUB_TOKEN@github.com/$TRAVIS_REPO_SLUG.git --tags -f > /dev/null 2>&1
 deploy:
   provider: releases
-  edge: true
+  edge: false
   token: $GITHUB_TOKEN
+  skip_cleanup: true
   overwrite: true
   file:
     - SetupO365ProPlusRetail.x64.en-us.zip
