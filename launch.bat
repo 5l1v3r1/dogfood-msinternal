@@ -4,7 +4,7 @@ reg query HKU\S-1-5-19 > nul 2>&1 && goto architecture
 set command="""%~f0"""
 SetLocal EnableDelayedExpansion
 set command="!command:'=''!"
-powershell Start-Process -FilePath "%ComSpec%" -ArgumentList '/c """!command!"""' -Verb RunAs > nul 2>&1
+powershell Start-Process -FilePath "%ComSpec%" -ArgumentList '/C """!command!"""' -Verb RunAs > nul 2>&1
 SetLocal DisableDelayedExpansion
 exit
 
