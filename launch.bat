@@ -74,22 +74,23 @@ if %option% == 1 (
 :branch
 set option=
 echo Choose what branch you want your product to be in:
-echo [1] Dogfood::DevMain
-echo [2] Dogfood::CC
-echo [3] Dogfood::FRDC
-echo [4] Dogfood::DCEXT
-echo [5] Microsoft::DevMain
-echo [6] Microsoft::CC
-echo [7] Microsoft::FRDC
-echo [8] Microsoft::DC
-echo [9] Microsoft::LTSC
-echo [10] Insiders::DevMain
-echo [11] Insiders::CC
-echo [12] Insiders::FRDC
-echo [13] Insiders::LTSC
-echo [14] Production::CC
-echo [15] Production::DC
-echo [16] Production::LTSC
+echo [1] Dogfood_DevMain
+echo [2] Dogfood_CC
+echo [3] Dogfood_FRDC
+echo [4] Dogfood_DCEXT
+echo [5] Microsoft_DevMain
+echo [6] Microsoft_CC
+echo [7] Microsoft_FRDC
+echo [8] Microsoft_DC
+echo [9] Microsoft_LTSC
+echo [10] Insiders_DevMain
+echo [11] Insiders_CC
+echo [12] Insiders_FRDC
+echo [13] Insiders_LTSC
+echo [14] Production_CC
+echo [15] Production_MEC
+echo [16] Production_DC
+echo [17] Production_LTSC
 echo.
 
 set /p option="Choose an option: "
@@ -98,52 +99,55 @@ echo.
 
 if %option% == 1 (
     set branch=ea4a4090-de26-49d7-93c1-91bff9e53fc3
-    set build=16.0.12402.20000
+    set build=16.0.12513.20000
 ) else if %option% == 2 (
     set branch=f3260cf1-a92c-4c75-b02e-d64c0a86a968
-    set build=16.0.12325.20084
+    set build=16.0.12430.20100
 ) else if %option% == 3 (
     set branch=834504cc-dc55-4c6d-9e71-e024d0253f6d
-    set build=16.0.11929.20510
+    set build=16.0.11929.20562
 ) else if %option% == 4 (
     set branch=c4a7726f-06ea-48e2-a13a-9d78849eb706
-    set build=16.0.10730.20426
+    set build=16.0.11328.20512
 ) else if %option% == 5 (
     set branch=b61285dd-d9f7-41f2-9757-8f61cba4e9c8
-    set build=16.0.12325.20012
+    set build=16.0.12508.20000
 ) else if %option% == 6 (
     set branch=5462eee5-1e97-495b-9370-853cd873bb07
-    set build=16.0.12325.20084
+    set build=16.0.12430.20050
 ) else if %option% == 7 (
     set branch=9a3b7ff2-58ed-40fd-add5-1e5158059d1c
-    set build=16.0.11929.20510
+    set build=16.0.11929.20562
 ) else if %option% == 8 (
     set branch=f4f024c8-d611-4748-a7e0-02b6e754c0fe
-    set build=16.0.11328.20488
+    set build=16.0.11929.20562
 ) else if %option% == 9 (
     set branch=1d2d2ea6-1680-4c56-ac58-a441c8c24ff9
-    set build=16.0.10353.20037
+    set build=16.0.10354.20022
 ) else if %option% == 10 (
     set branch=5440fd1f-7ecb-4221-8110-145efaa6372f
-    set build=16.0.12325.20012
+    set build=16.0.12430.20000
 ) else if %option% == 11 (
     set branch=64256afe-f5d9-4f86-8936-8840a6a4f5be
-    set build=16.0.12228.20332
+    set build=16.0.12325.20288
 ) else if %option% == 12 (
     set branch=b8f9b850-328d-4355-9145-c59439a0c4cf
-    set build=16.0.11929.20494
+    set build=16.0.11929.20516
 ) else if %option% == 13 (
     set branch=2e148de9-61c8-4051-b103-4af54baffbb4
     set build=16.0.10351.20054
 ) else if %option% == 14 (
     set branch=492350f6-3a01-4f97-b9c0-c7c6ddf67d60
-    set build=16.0.12228.20332
+    set build=16.0.12325.20288
 ) else if %option% == 15 (
-    set branch=7ffbc6bf-bc32-4f92-8982-f9dd17fd3114
-    set build=16.0.11328.20480
+    set branch=55336b82-a18d-4dd6-b5f6-9e5095c314a6
+    set build=16.0.12228.20416
 ) else if %option% == 16 (
+    set branch=7ffbc6bf-bc32-4f92-8982-f9dd17fd3114
+    set build=16.0.11328.20492
+) else if %option% == 17 (
     set branch=f2e724c1-748f-4b47-8fb8-8e0d210e9208
-    set build=16.0.10352.20042
+    set build=16.0.10353.20037
 ) else (
     echo You have chosen an invalid option: %option%
     echo.
