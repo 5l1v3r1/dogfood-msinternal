@@ -50,9 +50,9 @@ if %option% == 1 (
 :product
 set option=
 echo Choose what product you want to download:
-echo [1] Office 365 Home
-echo [2] Office 365 Business
-echo [3] Office 365 ProPlus
+echo [1] Microsoft 365
+echo [2] Microsoft 365 for business
+echo [3] Microsoft 365 for enterprise
 echo.
 
 set /p option="Choose an option: "
